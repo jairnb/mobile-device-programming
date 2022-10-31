@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/android_version"
+        android:layout_height="wrap_content"
+        android:hint="@string/android_version"
+        android:layout_width="match_parent"/>
+
+    <EditText
+        android:id="@+id/code_name"
+        android:layout_height="wrap_content"
+        android:hint="@string/code_name"
+        android:layout_width="match_parent"
+        />
+
+    <Button
+        android:id="@+id/add_button"
+        android:text="@string/add_button"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/teal_700"
+        android:onClick="add"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_table"
+        android:orientation="vertical"
+        android:stretchColumns="*">
+
+
+        <TableRow android:padding="5dip">
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="@string/version"
+                android:textSize="20dp"
+                android:background="@color/purple_200"
+                ></TextView>
+            <TextView
+                android:layout_height="wrap_content"
+                android:text="@string/code"
+                android:textSize="20dp"
+                android:textAlignment="textStart"
+                android:background="@color/purple_200"
+                ></TextView>
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>
