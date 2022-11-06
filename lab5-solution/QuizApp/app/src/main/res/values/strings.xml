@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+
+    <string name="question1">
+        You can create an emulator to simulate the configuration of a particular type of Android device using a tool like
+    </string>
+    <string name="answer_1_q1">Theme Editor</string>
+    <string name="answer_2_q1">Android SDK Manager</string>
+    <string name="answer_3_q1_right">AVD Manager</string>
+
+    <string name="question2">
+        Which of the following are Android RecyclerView layout managers? Select all that apply.
+    </string>
+    <string name="answer_1_q2_right">GridLayoutManager</string>
+    <string name="answer_2_q2">RecyclingManager</string>
+    <string name="answer_3_q2_right">LinearLayoutManager</string>
+
+</resources>
