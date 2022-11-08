@@ -27,7 +27,7 @@ class ProductListRecView : AppCompatActivity() {
         productList.add(item5)
         productList.add(item5)
 
-        val adapter = MyAdapter(productList)
+        val adapter = MyAdapter(this, productList)
         list_item.adapter = adapter
 
         list_item.layoutManager = LinearLayoutManager(this)
