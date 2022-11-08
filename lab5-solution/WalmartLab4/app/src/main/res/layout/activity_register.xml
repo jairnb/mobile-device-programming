@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="335dp"
+        android:layout_height="107dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/download" />
+
+    <TextView
+        android:id="@+id/create_account_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="Create a new Account"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:paddingLeft="5dp"
+        android:text="First Name *"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/firstname_et"
+        android:layout_width="363dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+    <TextView
+        android:id="@+id/lastname_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:paddingLeft="5dp"
+        android:text="Last Name *"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstname_et" />
+
+    <EditText
+        android:id="@+id/lastname_et"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastname_tv" />
+
+
+    <TextView
+        android:id="@+id/username_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:paddingLeft="5dp"
+        android:text="Email Address *"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastname_et" />
+
+    <EditText
+        android:id="@+id/username_et"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_tv" />
+
+    <TextView
+        android:id="@+id/password_tv"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="bottom"
+        android:text="Password *"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_et" />
+
+    <EditText
+        android:id="@+id/password_et"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_text_border"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_tv" />
+
+
+    <Button
+        android:id="@+id/crete_btn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@android:color/transparent"
+        android:text="Create Account"
+        android:textColor="@color/purple_700"
+        android:onClick="createAccount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_et" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="left"
+        android:text="* Required Field"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_tv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
