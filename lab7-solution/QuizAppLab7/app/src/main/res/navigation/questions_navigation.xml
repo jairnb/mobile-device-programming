@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/questionOneFragment">
+
+    <fragment
+        android:id="@+id/questionOneFragment"
+        android:name="com.example.quizapplab7.QuestionOneFragment"
+        android:label="fragment_question_one"
+        tools:layout="@layout/fragment_question_one" >
+        <action
+            android:id="@+id/action_questionOneFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+        <argument android:name="answers" app:argType="string[]"/>
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.quizapplab7.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <action
+            android:id="@+id/action_resultFragment_to_questionOneFragment"
+            app:destination="@id/questionOneFragment" />
+        <action
+            android:id="@+id/action_resultFragment_to_analysisFragment"
+            app:destination="@id/analysisFragment" />
+        <argument android:name="answers" app:argType="string[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/analysisFragment"
+        android:name="com.example.quizapplab7.AnalysisFragment"
+        android:label="fragment_analysis"
+        tools:layout="@layout/fragment_analysis" />
+</navigation>
