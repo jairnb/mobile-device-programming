@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
         saveQuestionsOnDatabase()
     }
 
+
     override fun onDestroy() {
         super.onDestroy()
         job.cancel()

@@ -1,5 +1,6 @@
 package com.example.quizapplab7
 
+import android.text.TextUtils
 import com.example.quizapplab7.db.Question
 
 class Helper {
@@ -15,7 +16,7 @@ class Helper {
                 "B: Android is an Operating System",
                 "C: Android is a web server",
                 "D: None",
-                "B",
+                "B: Android is an Operating System",
                 "Answer - B) Android is an Operating System"
 
             )
@@ -27,7 +28,7 @@ class Helper {
                 "B: Android Package",
                 "C: A single screen in an application with supporting java code",
                 "D: None of the above",
-                "C",
+                "C: A single screen in an application with supporting java code",
                 "Answer - C) A activity is a single screen in an application."
             )
 
@@ -38,7 +39,7 @@ class Helper {
                 "B: XML",
                 "C: Manifest",
                 "D: All of them",
-                "A",
+                "A: Java Source Code",
                 "Answer - A) Java source code is contained in the src folder"
             )
 
@@ -49,7 +50,7 @@ class Helper {
                 "B: Portability",
                 "C: Security",
                 "D: All of the above",
-                "D",
+                "D: All of the above",
                 "Answer - D)  All of the above are reasons for which Android is based on Linux."
             )
 
@@ -60,7 +61,7 @@ class Helper {
                 "B: JVM",
                 "C: Simple virtual machine",
                 "D: None",
-                "A",
+                "A: Dalvik operating system",
                 "Answer - A)  Android uses Dalvik operating system."
             )
 
@@ -71,7 +72,7 @@ class Helper {
                 "B: C++",
                 "C: Java",
                 "D: None",
-                "C",
+                "C: Java",
                 "Answer - C) Android is based upon Java."
             )
 
@@ -82,7 +83,7 @@ class Helper {
                 "B: android.view.View",
                 "C: android.view.ViewGroup",
                 "D: None",
-                "C",
+                "C: android.view.ViewGroup",
                 "Answer - C) all layout classes are the subclasses of android.view.ViewGroup in android."
             )
 
@@ -93,7 +94,7 @@ class Helper {
                 "B: Android Phone Kit",
                 "C: Android Package Kit",
                 "D: Android Photo Kit",
-                "C",
+                "C: Android Package Kit",
                 "Answer - C) APK stands for Android package kit."
             )
 
@@ -104,7 +105,7 @@ class Helper {
                 "B: It has all the information about an application",
                 "C:  It has the information about activities in an application",
                 "D: None",
-                "B",
+                "B: It has all the information about an application",
                 "Answer - B) It has all the information about an application"
             )
 
@@ -115,7 +116,7 @@ class Helper {
                 "B: For storing the data in the database",
                 "C: For sending the data from an application to another application",
                 "D: None of the above",
-                "C",
+                "C: For sending the data from an application to another application",
                 "Answer - C) A content provider is used to share information between Android applications."
             )
 
@@ -126,7 +127,7 @@ class Helper {
                 "B: Android Phone",
                 "C: Third-Party Emulator",
                 "D: All the above",
-                "D",
+                "D: All the above",
                 "Answer - D) Apps can be tested in all the sources mentioned above."
             )
 
@@ -137,7 +138,7 @@ class Helper {
                 "B: Activity",
                 "C: Fragments",
                 "D: None",
-                "C",
+                "C: Fragments",
                 "Answer - C) In android, mini activities are also known as Fragments"
             )
 
@@ -148,7 +149,7 @@ class Helper {
                 "B: Mobile interpretive compare",
                 "C: Dalvik converter",
                 "D: None",
-                "A",
+                "A: dex compiler",
                 "Answer - A)  dex compiler converts convert JAVA bytecode into Dalvik bytecode."
             )
 
@@ -159,7 +160,7 @@ class Helper {
                 "B: stopSelf() and stopService() method",
                 "C: finish() method",
                 "D: end() method",
-                "B",
+                "B: stopSelf() and stopService() method",
                 "Answer - B) stopSelf() and stopService() method can be used to stop services in android."
             )
 
@@ -170,7 +171,7 @@ class Helper {
                 "B: finish() method",
                 "C: neither a and b",
                 "D: None",
-                "D",
+                "D: None",
                 "Answer - D) Activity in Android can be killed using both finishActivity (int requestCode) and finish() method."
             )
 
@@ -193,5 +194,18 @@ class Helper {
 
             return listQuestion
         }
+
+        fun convertStringToMap(input: String) : HashMap<Int, String> {
+            val map1: HashMap<Int, String> = HashMap()
+            val entries: List<String> = input.split(",")
+            for (entry in entries) {
+                if (!TextUtils.isEmpty(entry) && entry.contains("=")) {
+                    val keyValue: Array<String> = entry.split("=").toTypedArray()
+                    map1[Integer.parseInt(keyValue[0])] = keyValue[1]
+                }
+            }
+            return map1;
+        }
     }
 }
+
